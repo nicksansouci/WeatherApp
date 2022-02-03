@@ -15,7 +15,7 @@ frame.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)
 button = tk.Button(frame, text="First Button")
 button.pack()
 
-label = tk.Label(frame, text="This is a test label", bg="gray")
+label = tk.Label(frame, text="This is a test label", bg="blue")
 label.pack()
 
 entry = tk.Entry(frame, bg='gray')
