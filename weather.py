@@ -1,4 +1,5 @@
 import tkinter as tk
+import requests
 
 height = 600
 width = 800
@@ -9,16 +10,26 @@ root = tk.Tk()
 canvas = tk.Canvas(root, height=height, width=width)
 canvas.pack()
 
-frame = tk.Frame(root, bg='white')
-frame.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.5)
 
-button = tk.Button(frame, text="First Button", fg='red', bg='white')
-button.place(relx=0.85, rely=0.20, relwidth=0.25, relheight=0.25)
+background_label = tk.Label(root, bg='#c7ddcc')
+background_label.place(relwidth=1, relheight=1)
 
-label = tk.Label(frame, text="This is a test label", bg="blue")
-label.place(relx=0.3, rely=0, relwidth=0.45, relheight=0.25)
 
-entry = tk.Entry(frame, bg='gray')
-entry.grid(row=0, column=2)
+frame = tk.Frame(root, bg='#c7ddcc', bd=5)
+frame.place(relx=0.5, rely=0.1, relwidth=0.70, relheight=0.09, anchor='n')
+
+entry = tk.Entry(frame, text='City or ZIP Code', bg='#16123f', font=40, fg='#ffe26a')
+entry.place(relwidth=0.65,relheight=1)
+
+button = tk.Button(frame, text="View Weather", font=40, bg='#16123f', fg='#16123f')
+button.place(relx=0.7, relheight=1, relwidth=0.3)
+
+#label = tk.Label(frame, text="This is a test label", bg="blue")
+#label.place(relx=0.3, rely=0, relwidth=0.3, relheight=1)
+lowerframe = tk.Frame(root, bg='#c7ddcc', bd=10)
+lowerframe.place(relx = 0.5, rely = 0.25, relwidth = 0.75, relheight = 0.6, anchor = 'n')
+
+label = tk.Label(lowerframe)
+label.place(relwidth=1, relheight=1)
 
 root.mainloop()
